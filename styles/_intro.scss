@@ -1,0 +1,106 @@
+.main-head {
+    width: 95%;
+    margin: 0 0 0 auto;   
+}
+
+nav {
+    @include flex(space-between, center, row);
+    min-height: 10vh;
+    width: 60%;
+    flex-wrap: wrap;
+    .logo{
+        @include flex(flex-start, center, row);
+        flex: 1 1 10rem;
+        h1 {
+            margin: 2rem;
+        }
+    }
+    ul {
+        @include flex(space-around, center, row);
+        flex: 1 1 40rem;
+    }
+}
+
+.intro {
+    min-height: 90vh;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    @include flex(space-between, center, row);
+    h2 {
+        font-size: 6rem;
+        padding-top: 2rem;
+        background: $gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    h3{
+        font-size: 4rem;
+        padding: 2rem 0rem;
+
+    }
+    p{
+        padding-top: 2rem;
+        color: $gray-text;
+    }
+}
+
+
+.splash {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+    z-index: -1;
+}
+
+.images-social {
+    margin-top: 4rem;
+    a {
+        margin-left: 5rem;
+    }
+}
+
+.active {
+    background: $gray-text;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+}
+
+.intro-text , .intro-images {
+    flex: 1 1 40rem;
+}
+
+#BOXES1{
+    animation: BOX1 1.5s ease infinite alternate;
+}
+#BOXES2{
+    animation: BOX1 2s ease infinite alternate;
+}
+#BOXES3{
+    animation: BOX1 2.4s ease infinite alternate;
+}
+
+#Shoe{
+    animation: Shoe 1s ease infinite alternate;
+    transform-box: fill-box;
+    transform-origin: bottom;
+}
+
+@keyframes BOX1{
+    from{
+        transform: translateY(0%);
+    }to{
+        transform: translateY(10%);
+    }
+}
+
+@keyframes Shoe{
+    from{
+        transform: rotateZ(-1.5deg);
+    }to{
+        transform: rotateZ(1.5deg)
+    }
+}
